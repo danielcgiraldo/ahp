@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Info, Loading } from "../lib/icons";
 
-const Form = ({ design }: { design: any }) => {
-    const [loading, setLoading] = useState(true);
+const Form = ({ design, setResults }: { design: any, setResults: any }) => {
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = (ev: React.FormEvent) => {
+        setLoading(true);
         const form = ev.target as HTMLFormElement;
         const formData = new FormData(form);
         const object: any = {};
@@ -24,8 +25,10 @@ const Form = ({ design }: { design: any }) => {
                     console.error("Error: " + data.error);
                     return;
                 }
+                setResults(data);
             })
-            .catch((err) => console.error(err));
+            .catch((err) => console.error(err))
+            .finally(() => setLoading(false));
     };
 
     return (
