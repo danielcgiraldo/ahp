@@ -1,10 +1,27 @@
 ---
-import Main from '../components/Main';
-import Layout from '../layouts/Layout.astro';
+import Main from "../components/Main";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-        <Main client:load />
-	</main>
+<Layout title="AHP Decision Model - Electric Car">
+    <main class="w-screen h-screen">
+        <div class="grid place-items-center w-full h-full lg:hidden">
+            <div class="text-center px-6 max-w-xs">
+                <img
+                    src="images/responsive.png"
+                    alt="Phone and Tablet (Mobile devices)"
+                    class="w-4/5 mx-auto mb-8 md:mb-10"
+                />
+                <span class="text-primary text-xl font-medium"
+                    >Mobile is not supported yet</span
+                >
+                <p class="mt-2">
+                    In this meantime, please use a Desktop Browser.
+                </p>
+            </div>
+        </div>
+        <div class="hidden lg:block w-full h-full">
+            <Main client:load />
+        </div>
+    </main>
 </Layout>
