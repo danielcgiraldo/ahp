@@ -106,7 +106,7 @@ const RelativeWeightSelector = ({
             <select
                 name={id}
                 id={id}
-                className="w-full bg-transparent border-b border-primary"
+                className="w-full bg-transparent border-b border-secondary"
             >
                 <option value="" selected disabled></option>
                 <option value="1">igualmente importante que</option>
