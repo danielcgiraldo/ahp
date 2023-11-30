@@ -44,17 +44,17 @@ const Dashboard = () => {
                     </h4>
                     <ul className="grid gap-4">
                         <RelativeWeightSelector
-                            id="macro_char_battery"
+                            id="char_price_safety"
                             label1="Precio"
                             label2="Seguridad"
                         />
                         <RelativeWeightSelector
-                            id="macro_battery_motor"
+                            id="char_design_price"
                             label1="Diseño"
                             label2="Precio"
                         />
                         <RelativeWeightSelector
-                            id="macro_motor_char"
+                            id="char_safety_motor"
                             label1="Seguridad"
                             label2="Motor"
                         />
@@ -65,7 +65,7 @@ const Dashboard = () => {
                     </h4>
                     <ul className="grid gap-4">
                         <RelativeWeightSelector
-                            id="macro_char_battery"
+                            id="battery_autonomy_capacity"
                             label1="Autonomía"
                             label2="Capacidad Útil"
                         />
@@ -76,7 +76,7 @@ const Dashboard = () => {
                     </h4>
                     <ul className="grid gap-4">
                         <RelativeWeightSelector
-                            id="macro_char_battery"
+                            id="motor_velocity_power"
                             label1="Velocidad Máxima"
                             label2="Potencia Máxima"
                         />
@@ -107,6 +107,7 @@ const RelativeWeightSelector = ({
                 name={id}
                 id={id}
                 className="w-full bg-transparent border-b border-secondary"
+                required
             >
                 <option value="" selected disabled></option>
                 <option value="1">igualmente importante que</option>
