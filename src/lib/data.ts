@@ -64,24 +64,40 @@ export const DATA: {
 };
 
 export const VEHICLES: string[] = ["RENAULT", "VOLVO", "BYD", "TESLA"];
+export const VEHICLES_NAMES: { [key: string]: string } = {
+    RENAULT: "Renault Zoe E-Tech",
+    VOLVO: "Volvo XC40 Recharge",
+    BYD: "BYD Tang EV",
+    TESLA: "Tesla Model 3",
+};
 export const MACROCRITERIA: string[] = ["char", "battery", "motor"];
 export const SUBCRITERIA: { [key: string]: string[] } = {
     char: ["price", "safety", "design"],
     battery: ["autonomy", "capacity"],
     motor: ["speed", "power"],
 };
+export const SUBCRITERIA_NAMES: { [key: string]: string } = {
+    price: "Precio",
+    safety: "Seguridad",
+    design: "Diseño",
+    autonomy: "Autonomía",
+    capacity: "Capacidad Útil",
+    speed: "Velocidad Máxima",
+    power: "Potencia Máxima",
+}
+
 
 /* ==== LOGIC ==== */
 
 const normalize = (data: {
     [key: string]: { [key: string]: { [key: string]: number } };
 }) => {
-    const NormalizedData: { [key: string]: { [key: string]: number[] } } = {};
+    const LinerNormalizedData: { [key: string]: { [key: string]: number[] } } = {};
 
     for (const macro of MACROCRITERIA) {
-        NormalizedData[macro] = {};
+        LinerNormalizedData[macro] = {};
         for (const sub of SUBCRITERIA[macro]) {
-            NormalizedData[macro][sub] = [];
+            LinerNormalizedData[macro][sub] = [];
             const max = Math.max(
                 ...VEHICLES.map((vehicle) => data[vehicle][macro][sub])
             );
@@ -90,9 +106,9 @@ const normalize = (data: {
             );
             for (const vehicle of VEHICLES) {
                 if (max == min) {
-                    NormalizedData[macro][sub].push(1);
+                    LinerNormalizedData[macro][sub].push(1);
                 } else {
-                    NormalizedData[macro][sub].push(
+                    LinerNormalizedData[macro][sub].push(
                         (data[vehicle][macro][sub] - min) / (max - min)
                     );
                 }
@@ -113,15 +129,15 @@ const normalize = (data: {
             );
 
             for (const vehicle of VEHICLES) {
-                const currentNormalized = NormalizedData[macro][sub][VEHICLES.indexOf(vehicle)];
+                const currentNormalized = LinerNormalizedData[macro][sub][VEHICLES.indexOf(vehicle)];
                 NormalizedCriteriaData[macro][sub].push(
-                    currentNormalized / NormalizedData[macro][sub].reduce((a, b) => a + b)
+                    currentNormalized / LinerNormalizedData[macro][sub].reduce((a, b) => a + b)
                 );
             }
         }
     }
 
-    return NormalizedCriteriaData;
+    return [NormalizedCriteriaData, LinerNormalizedData];
 };
 
 export const getData = (design: { [key: string]: number }) => {
