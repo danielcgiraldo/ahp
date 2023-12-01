@@ -40,7 +40,7 @@ const Results = ({
             </div>
             <button
                 onClick={() => setResults(null)}
-                className="font-medium fixed -right-9 top-16 translate-y-full -rotate-90 bg-callable hover:bg-callable-hover text-white px-5 py-1.5 pb-2"
+                className="font-medium fixed -right-9 top-16 translate-y-full -rotate-90 bg-callable hover:bg-callable-hover text-white px-5 py-1.5 pb-2 select-none"
             >
                 Regresar
             </button>
