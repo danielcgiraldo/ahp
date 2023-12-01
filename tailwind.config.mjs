@@ -12,6 +12,8 @@ export default {
             "callable-hover": "#3457b1",
             "white": "#FFFFFF",
             "transparent": "transparent",
+            "black": "#000000",
+            "bg2": "#e9e9e9",
         },
         fontFamily: {
             'sans': ['Inter', 'sans-serif']

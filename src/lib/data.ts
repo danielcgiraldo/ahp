@@ -11,7 +11,7 @@ export const DATA: {
             safety: 1,
         },
         battery: {
-            autonomy: 395,
+            autonomy: 390,
             capacity: -52,
         },
         motor: {
@@ -25,7 +25,7 @@ export const DATA: {
             safety: 6,
         },
         battery: {
-            autonomy: 420,
+            autonomy: 460,
             capacity: -69,
         },
         motor: {

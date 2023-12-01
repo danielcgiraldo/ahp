@@ -26,7 +26,7 @@ const Dashboard = ({ design }: { design: any }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Daniel Castillo Giraldo
+                    Daniel Castillo
                 </a>
                 .
             </p>
