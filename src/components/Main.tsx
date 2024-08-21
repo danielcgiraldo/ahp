@@ -9,9 +9,6 @@ const Main = () => {
         TESLA: 5,
         BYD: 5,
     });
-    useEffect(() => {
-        console.log(design);
-    }, [design]);
     return (
         <div className="w-full min-h-full px-12 flex gap-14 justify-end">
             <div className="h-full w-[calc(100vw-3rem*2-3.5rem-20rem)] fixed left-14">
