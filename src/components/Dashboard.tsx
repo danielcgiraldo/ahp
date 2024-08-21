@@ -6,7 +6,7 @@ import { useState } from "react";
 const Dashboard = ({ design }: { design: any }) => {
     const [results, setResults] = useState<any>(null);
     return (
-        <div className="w-full min-h-full pt-16 pb-6">
+        <div className="w-full min-h-full pt-8 pb-6">
             <h1 className="text-primary text-5xl font-medium text-center mb-1">
                 Best Car
             </h1>

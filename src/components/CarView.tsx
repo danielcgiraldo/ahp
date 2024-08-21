@@ -44,7 +44,7 @@ const CarView = ({ design, setDesign }: { design: any; setDesign: any }) => {
                             title={VEHICLES_NAMES[vehicle]}
                             price={COP.format(DATA[vehicle].char.price * -1)}
                             safety={DATA[vehicle].char.safety.toString()}
-                            design={"5"}
+                            design={design[vehicle]}
                             setDesign={(value) => {
                                 setDesign((prev: any) => ({
                                     ...prev,
