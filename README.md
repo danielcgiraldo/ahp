@@ -1,54 +1,74 @@
-# Astro Starter Kit: Basics
+# AHP Calculator - Electric Vehicle Selection
 
-```sh
-npm create astro@latest -- --template basics
-```
+**Autor:** Daniel Castillo Giraldo  
+**Correo:** <dcastillogi@unal.edu.co>  
+**Carrera:** Ingeniería de Sistemas y Computación  
+**Universidad:** Universidad Nacional de Colombia  
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Descripción del Proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Este proyecto, desarrollado para la asignatura **Introducción al Análisis de Decisiones**, consiste en una calculadora que emplea el método de **Jerarquía Analítica (AHP)** para la selección óptima de vehículos eléctricos. La herramienta permite a los usuarios comparar distintos modelos de vehículos eléctricos basándose en una serie de criterios clave, que incluyen:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Precio:** Costo del vehículo.
+- **Seguridad:** Nivel de seguridad del vehículo, evaluado en una escala del 1 al 6.
+- **Diseño:** Valoración del diseño estético y funcional del vehículo.
+- **Autonomía:** Distancia máxima que el vehículo puede recorrer con una carga completa.
+- **Capacidad Útil:** Capacidad de la batería del vehículo en kilovatios-hora (kWh).
+- **Velocidad Máxima:** Velocidad máxima que el vehículo puede alcanzar en kilómetros por hora (km/h).
+- **Potencia Máxima:** Potencia máxima del motor del vehículo en caballos de fuerza (hp).
 
-## 🚀 Project Structure
+La calculadora AHP proporciona un enfoque estructurado para la toma de decisiones, facilitando la evaluación de alternativas en función de estos múltiples factores y ayudando a identificar el vehículo eléctrico que mejor se ajusta a las necesidades del usuario.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Datos de Vehículos
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+A continuación, se presentan los datos de los vehículos eléctricos evaluados, organizados por criterios y subcriterios:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Vehículos Evaluados
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+| Vehículo        | Nombre Completo           |
+|-----------------|---------------------------|
+| **RENAULT**     | Renault Zoe E-Tech        |
+| **VOLVO**       | Volvo XC40 Recharge       |
+| **BYD**         | BYD Tang EV               |
+| **TESLA**       | Tesla Model 3             |
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Criterios y Subcriterios
 
-## 🧞 Commands
+El análisis se realizó utilizando tres macrocategorías principales, cada una con sus subcriterios específicos:
 
-All commands are run from the root of the project, from a terminal:
+| Macrocriterio | Subcriterios                   |
+|---------------|--------------------------------|
+| **Características Generales**      | Precio, Seguridad, Diseño      |
+| **Batería**   | Autonomía, Capacidad Útil      |
+| **Motor**     | Velocidad Máxima, Potencia Máxima |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Características de los Vehículos por Criterio
 
-## 👀 Want to learn more?
+A continuación, se muestran las características de cada vehículo, organizadas por los criterios evaluados:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+#### Características Generales
+
+| Vehículo   | Precio (COP) | Seguridad (1-6) | Diseño (1-10) |
+|------------|--------------|-----------------|---------------|
+| **RENAULT** | -169,990,000 | 1               | Elegido por el usuario |
+| **VOLVO**   | -270,000,000 | 6               | Elegido por el usuario |
+| **BYD**     | -329,900,000 | 6               | Elegido por el usuario |
+| **TESLA**   | -260,000,000 | 6               | Elegido por el usuario |
+
+#### Batería
+
+| Vehículo   | Autonomía (km) | Capacidad Útil (kWh) |
+|------------|----------------|----------------------|
+| **RENAULT** | 390            | -52                  |
+| **VOLVO**   | 460            | -69                  |
+| **BYD**     | 500            | -108                 |
+| **TESLA**   | 500            | -75                  |
+
+#### Motor
+
+| Vehículo   | Velocidad Máxima (km/h) | Potencia Máxima (hp) |
+|------------|-------------------------|----------------------|
+| **RENAULT** | 140                     | 135                  |
+| **VOLVO**   | 160                     | 231                  |
+| **BYD**     | 180                     | 268                  |
+| **TESLA**   | 260                     | 138                  |
