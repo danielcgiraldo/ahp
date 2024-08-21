@@ -58,7 +58,7 @@ A continuación, se muestran las características de cada vehículo, organizadas
 
 #### Características Generales
 
-| Vehículo   | Precio (COP) | Seguridad (1-6) | Diseño (1-10) |
+| Vehículo   | Precio (COP) | Seguridad (1-6) | Diseño (1-5) |
 |------------|--------------|-----------------|---------------|
 | **RENAULT** | 169,990,000 | 1               | Elegido por el usuario |
 | **VOLVO**   | 270,000,000 | 6               | Elegido por el usuario |
