@@ -1,5 +1,7 @@
 # AHP Calculator - Electric Vehicle Selection
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4a19ab25-7d3d-4603-a110-c2065e47dbd8/deploy-status)](https://app.netlify.com/sites/ahp-idaniel-dev/deploys)
+
 **Autor:** Daniel Castillo Giraldo  
 **Correo:** <dcastillogi@unal.edu.co>  
 **Carrera:** Ingeniería de Sistemas y Computación  
